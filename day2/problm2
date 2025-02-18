@@ -1,0 +1,28 @@
+#include<stdio.h>
+void readDetails(float *salary, int *score, int *experience) {
+  printf("Enter salary: ");
+  scanf("%f", salary);
+  printf("Enter score: ");
+  scanf("%d", score);
+  printf("Enter experience: ");
+  scanf("%d", experience);
+}
+
+int isEligible(float salary, int score, int experience) {
+  return (salary > 50000 && score > 70 && experience > 2);
+}
+
+int main() {
+  float salary;
+  int score;
+  int experience;
+
+  readDetails(&salary, &score, &experience);
+  if (isEligible(salary, score, experience)) {
+    printf("Loan Approved");
+  } else {
+    printf("Loan Rejected");
+  }
+  return 0;
+}
+
